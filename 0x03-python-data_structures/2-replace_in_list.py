@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-a = 89
-b = 10
-a, b = b, a
-print("a={:d} - b={:d}".format(a, b))
+def replace_in_list(my_list, idx, element):
+    for arr in range(len(my_list)):
+        if ((idx < 0) or (idx > len(my_list) - 1)):
+            return (my_list)
+        else:
+            my_list[idx] = element
+            return (my_list)
