@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-""" Program that returns the number of lines """
+""" Program that open, read and write a file """
 
 
-def number_of_lines(filename=""):
-    """ function that returns the number of lines of a text file """
-    count = 0
-    with open(filename) as f:
-        for line in f:
-            count += 1
-    return (count)
+def write_file(filename="", text=""):
+    """ function that writes a string to a text file (UTF8) and
+    returns the number of characters written """
+    with open(filename, 'w', encoding='utf-8') as f:
+        return (f.write(text))
